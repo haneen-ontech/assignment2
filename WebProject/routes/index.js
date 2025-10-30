@@ -1,34 +1,30 @@
 var express = require('express');
-var router = express.Router();
+var app = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+app.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
+app.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
 /* GET about me page. */
-router.get('/about', function(req, res, next) {
+app.get('/about', function(req, res, next) {
   res.render('index', { title: 'About' });
 });
 
-/* GET products page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products' });
+/* GET projects page. */
+app.get('/projects', function(req, res, next) {
+  res.render('index', { title: 'Projects' });
 });
 
-/* GET services page. */
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services' });
-});
 
 /* GET contact me page. */
-router.get('/contactus', function(req, res, next) {
-  res.render('index', { title: 'Contact us' });
+app.get('/contactme', function(req, res, next) {
+  res.render('index', { title: 'Contact' });
 });
 
 /*
@@ -38,4 +34,4 @@ View --> pages
 Controller --> logic behind routes
 */
 
-module.exports = router;
+module.exports = app;
