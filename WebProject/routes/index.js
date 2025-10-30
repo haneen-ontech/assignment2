@@ -13,18 +13,18 @@ app.get('/home', function(req, res, next) {
 
 /* GET about me page. */
 app.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About' });
+  res.render('aboutme', { title: 'About' });
 });
 
 /* GET projects page. */
 app.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Projects' });
+  res.render('projects', { title: 'Projects' });
 });
 
 
 /* GET contact me page. */
 app.get('/contactme', function(req, res, next) {
-  res.render('index', { title: 'Contact' });
+  res.render('contactme', { title: 'Contact' });
 });
 
 /*

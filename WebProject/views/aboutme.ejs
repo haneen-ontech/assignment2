@@ -1,0 +1,51 @@
+<%- include ./partials/header.ejs %>
+    <!--Header / Navbar-->
+    <%- include ./partials/main_nav.ejs %>
+
+    <!--Main Content-->
+    <main class="flex-fill">
+    <script src="/Script/video.js" defer></script>
+          <!--All content is enclosed in the wrapper ID style-->
+    <div id="wrapper" class="container my-auto">
+      <!--The banner ID style is inside the wrapper ID style, the banner is the top section of the webpage and usually contains the main heading, navigation bar, and so forth, that is why it is a <header> tag instead of <div> tag-->
+        <div class="container text-center">
+            <div class="row align-items-stretch">
+                <div class="col bg-light p-3">
+                    <figure> <!--semantic tag used for linking images, can control size of image, needs alt id for reference later-->
+                        <img src="/Asset/images/profile.jpeg" width="190" height="240" alt="mypic">
+                        <figcaption>
+                        <h5>This is me!</h5>
+                        </figcaption>
+                    </figure>
+                    <article> <!--<article> tag with <section> tags to divide information in order-->
+                    <h4>Who is Haneen?</h4>
+                    <h6>I am 20 years old and currently going to school at Ontario Tech University.</h6>
+                    <section>
+                        <h5><mark>My Dream</mark></h5>
+                        <h6>I would like to become smart enough to be an ethical hacker one day so that I can help others!</h6>
+                    </section>
+                    <section>
+                        <h5><mark>My Favourites</mark></h5>
+                        <h6>My favourite things besides cybersecurity are: sushi, puzzles and fashion.
+                        </h6>
+                    </section>
+                    </article>
+                </div>
+                <div class="col bg-light p-3">
+                    <video controls muted loop poster="/Asset/images/rubikscube.jpg" id="myvideo"> <!--video controls such as automaticlaly muted, plays on loop, and a poster for when video isn't playing-->
+                    <source src="/Asset/images/aboutme.mp4" type="video/mp4"> <!--have both mp4 and ogg formats to ensure compatability with most browsers-->
+                    <source src="/Asset/images/aboutme.ogv" type="video/ogg">
+                    Your browser doesn't support the video tag. <!--In case no file or video works due to not being supported by browser-->
+                    </video>
+                    <!--Button class for video playbutton, call on js function-->
+                    <button class="playbutton" onclick="playPause()">Play/Pause</button>
+                </div>
+            </div>
+        </div>
+
+      <!--The clear class style removes floats-->
+      <div class="clear"></div>
+    </main>
+
+    <!-- Footer / Navbar -->
+    <%- include ./partials/footer.ejs %>
