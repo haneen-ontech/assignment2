@@ -8,6 +8,8 @@ body {
     font-family: Verdana, Geneva, Arial, sans-serif;
     padding: 0px;
     margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    
 
     /*Background gradient for desktop it is linear gradient*/
     background: lightblue;
@@ -46,10 +48,19 @@ body {
 }
 
 
+/*
+.col-md-4{
+    padding: 10px;
+}
+*/
+
 /* Defining a style for a set of tags by using commas where a left margin is added*/
 h1, h2, h3, h4, h5, h6, p, li {
     margin-left: 15px;
+    font-family: 'Poppins', sans-serif;
 }
+
+
 
 #mainfooter {
     height:130px;
@@ -148,6 +159,7 @@ figcaption {
     text-align: center;
     font-size: small;
     margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -155,6 +167,7 @@ figcaption {
 article {
     text-align: center;
     margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -183,6 +196,7 @@ li {
     text-align: left;
     float: left;
     margin-right: 40px;
+    font-family: 'Poppins', sans-serif;
 }
 
 
