@@ -4,154 +4,20 @@
 
 
 /* The body tag style applies to all elements on the page */
+/* Global font and background */
 body {
-    font-family: Verdana, Geneva, Arial, sans-serif;
-    padding: 0px;
-    margin: 0px;
     font-family: 'Poppins', sans-serif;
-    
-
-    /*Background gradient for desktop it is linear gradient*/
-    background: lightblue;
-    background: -moz-linear-gradient(top, lightpink 0%, lightblue 100%);
-    background: -webkit-linear-gradient(top, lightpink 0%, lightblue 100%);
-    background: -o-linear-gradient(top, lightpink 0%, lightblue 100%);
-    background: linear-gradient(to bottom, lightpink 0%,lightblue 100%);
-}
-/* The wrapper ID style is encases everything else*/
-#wrapper {
-    width: 960px;      /* total width of both columns: 360 + 600 = 960 */
-    margin: auto;
-    overflow: hidden;
-    /*Same gradient background as body*/
-    background: lightblue;
-    background: -moz-linear-gradient(top, lightpink 0%, lightblue 100%);
-    background: -webkit-linear-gradient(top, lightpink 0%, lightblue 100%);
-    background: -o-linear-gradient(top, lightpink 0%, lightblue 100%);
-    background: linear-gradient(to bottom, lightpink 0%,lightblue 100%);
-}
-
-/* The button-row ID style is centered and a container for homepage buttons*/
-.button-row {
-    width: 900px;
-    height: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    background: lightgoldenrodyellow;
-
-}
-
-.button-row h3 {
-    text-align: center;
-    color: black;
-}
-
-
-/*
-.col-md-4{
-    padding: 10px;
-}
-*/
-
-/* Defining a style for a set of tags by using commas where a left margin is added*/
-h1, h2, h3, h4, h5, h6, p, li {
-    margin-left: 15px;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-
-#mainfooter {
-    height:130px;
-    background-color: lightblue;
-    text-align: center;
-    padding: 10px;
-}
-
-#aboutfooter { /*different footers for different pages*/
-    height:130px;
-    background: -moz-linear-gradient(45deg, lightblue 0%, darkslateblue 100%);
-    background: -webkit-linear-gradient(45deg, lightblue 0%, darkslateblue 100%);
-    background: -o-linear-gradient(45deg, lightblue 0%, darkslateblue 100%);
-    background: linear-gradient(45deg, lightblue 0%,darkslateblue 100%);
-    text-align: center;
-    padding: 10px;
-}
-
-#banner {
-    height: 150px;
-    background-color: lightpink;
-    text-align: center;
-}
-
-#banner h1 {
-    color: darkslateblue;
-    text-align: center;
-}
-
-/*method for adding styles to images, using that alt id we saw was necessary earlier*/
-img[alt="icon"] {
-    float: right;
-    height: 250px;
-    width: 250px; 
-    background-color: white;
-    margin-top: 80px;
-    margin-left: 10px;
-    margin-right: 33px;
-    opacity:1;
-}
-
-/*style change for when the action of the mouse is hovering over element*/
-img[alt="icon"]:hover {
-    background-color: white;
-    opacity:0.5;
-}
-
-/* Terminating float with clear class */
-.clear{
-    clear: both;
-}
-
-/*styling my embedded video*/
-#myvideo {
-    width:500px;
-    height:400px;
-    margin-top: 90px;
-    margin-left: 50px;
-    background-color: black;
-    border: 6px darkslateblue solid;
-
-}
-
-/* The right-column ID style is floated right */
-#right-column {
-    float: right;
-    width: 588px;
-    height: 600px;
-    background-color:lightyellow;
+    background: linear-gradient(to bottom, lightpink 0%, lightblue 100%);
     margin: 0;
     padding: 0;
 }
-/* The left-column ID style is floated left */
-#left-column {
-    float: left;
-    width: 348px;
-    background-color:lightgoldenrodyellow;
-    height:600px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
 
+/* Figure styling */
 figure {
     background-color: black;
     border: 4px solid darkslateblue;
-    width: 200px;
-    height: 250px;
     display: inline-block;
-    margin: 0;
-
+    margin: 0 auto;
 }
 
 figcaption {
@@ -160,99 +26,34 @@ figcaption {
     font-size: small;
     margin-top: 10px;
     font-family: 'Poppins', sans-serif;
-
 }
 
-
+/* Article text */
 article {
     text-align: center;
-    margin-top: 30px;
     font-family: 'Poppins', sans-serif;
-
+    margin-top: 20px;
 }
 
-/*styles for playbutton created by javascript*/
+/* Play button styling */
 .playbutton {
-    background-color:darkslateblue;
-    color:white;
-    height:40px;
-    border:2px white solid;
+    background-color: darkslateblue;
+    color: white;
+    height: 40px;
+    border: 2px white solid;
     box-shadow: 10px 10px 5px black;
     border-radius: 5px;
-    margin-left: 55px;
+    margin-top: 10px;
 }
 
 .playbutton:hover {
-    background-color:darkgrey;
-    color:black;
-    opacity: 0.5;
-    height:40px;
-    box-shadow: 5px 5px 5px black;
-    border:2px white solid;
-    border-radius: 5px;
-}
-
-li {
-    text-align: left;
-    float: left;
-    margin-right: 40px;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.project-row {
-    width: 900px;
-    height: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    background: lightgoldenrodyellow;
-}
-
-/*adding style to specifically h3 from class project-row, other h3 unaffected*/
-.project-row h3 {
-    text-align: center;
+    background-color: darkgrey;
     color: black;
+    opacity: 0.5;
 }
 
-/* Adding style to our box class, making them centered*/
-.box {
-    float: left;
-    height: 200px;
-    width: 400px; 
-    background-color: lightblue;
-    margin-top: 20px;
-    margin-left: 33px;
-    opacity:.5;
-}
-
-/* Pseudo-class applies to the box class when in a hovered state*/
-.box:hover {
-    background-color: darkslateblue;
-    opacity:1;
-}
-
-.project-row article h3 {
+/* Footer styles are fine */
+#mainfooter, #aboutfooter {
     text-align: center;
-    color: white;
-}
-
-.project-row article {
-    text-align: center;
-    color: white;
-}
-
-.form-layout {
-    width: 900px;
-    height: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background: lightgoldenrodyellow;
-
-}
-
-.form-layout p{
-    padding: 12px;
-
+    padding: 10px;
 }
