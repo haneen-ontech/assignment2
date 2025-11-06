@@ -1,11 +1,96 @@
+<!--header/navbar pulled from partials folder-->
 <%- include ./partials/header.ejs %>
-    <!--Header / Navbar-->
-    <%- include ./partials/main_nav.ejs %>
+<%- include ./partials/main_nav.ejs %>
 
-    <!--Main Content-->
-    <main class="flex-fill">
+<!--main content (body)-->
+
+<main>
+    <div class="container-fluid py-5">
+    <!--container-fluid is a bootstrap class that gives the element a centered and responsive container that takes up the entire width of the page, perfect for fluidity-->
+    <!--py-5 means padding y (top and bottom) with a value of 5, this gives the container internal vertical spacing between itself and content for a cleaner look-->
+
+        <div class="row justify-content-center mb-5">
+        <!--row class for the text, justify-content-center centers the row horizontally, mb-5 gives the row a bottom margin value of 5 to add spacing between itself and the next row-->
+            <div class="col-11 col-md-8 col-lg-6 text-center">
+            <!--this column was researched for fluidity
+            -col-11 is a bootstrap grid class which means on small screens (like phones) the column will take up 11 out of 12 columns (falmost full width)
+            -col-md-8 means that on medium screens, the column will take up 8 out of 12 columns (two thirds of the width)
+            -col-lg-6 means that on large screens, the column will take up 6 out of 12 columns (half of the width)
+            -text-center ensures the element is centered
+            -all together this ensures an appealing and fluid look no matter what size screen the home page takes up-->
+                <div class="bg-light p-4 rounded shadow">
+                <!--gives the element a light background with an overall padding of 4, makes the element have rounded corners and a shadow behind it-->
+                    <h3> Send me your questions and project related queries!</h3>
+                    <!--form using mailto for submission-->
+                    <form action="mailto:haneen.almusowi@ontariotechu.net?subject=Feedback%20from%20website" method="post" enctype="text/plain" id="feedbackForm">
+
+                        <!--intro text-->
+                        <p>Send me your questions and project related queries!</p>
+
+                        <!--name input, making it required for submission, adding a placeholder to tell users what to type-->
+                        <p>
+                            <label>Name: </label>
+                            <input type="text" name="Name" size="40"
+                            placeholder="Enter your name" required>
+                        </p>
+
+                        <!--email input, also required, makes it so that user must input an email format-->
+                        <p>
+                            <label>Email: </label>
+                            <input type="email" name="Email" size="40"
+                            placeholder="Enter your email address" required>
+                        </p>
+                        <!--comments textarea where users can write a textbox-->
+                        <p>
+                            <label>Comments: </label>
+                            <br>
+                            <textarea class="form-control" name="comments" rows="5" placeholder="Write your feedback here"></textarea>
+                            <!--form-control is a bootstrap class that automatically sets the text-box to the width of its container-->
+                        </p>
+                        <!--checkbox for feedback-->
+                        <p>
+                            <input type="checkbox" name="rate" checked>
+                            <label>Did you enjoy my website?</label>                
+                        </p>
+                        <!--robot check question, reuires in code javascript-->
+                        <p>
+                            <label for="quantity">What is 2 + 2? (To check if you're a robot)</label>
+                            <input type="number" id="quantity" name="quantity">
+
+                            <script>
+                                // select the form
+                                const form = document.getElementById('feedbackForm');
+
+                                // intercept submit
+                                form.addEventListener('submit', function(event) {
+                                    event.preventDefault(); // stop default submit
+
+                                    const answer = document.getElementById('quantity').value;
+
+                                    // check if robot question is correct
+                                    if (answer == 4) {
+                                        alert("Submitted!");
+                                        form.submit(); // actually submit the form (mailto)
+                                    } else {
+                                        alert("Incorrect number, try again.");
+                                    }
+                                });
+                            </script>
+                        
+                        </p>
+                        <p>
+                            <!--my reset and submit buttons-->
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="submit">
+
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
       
-    </main>
+</main>
 
-    <!-- Footer / Navbar -->
-    <%- include ./partials/footer.ejs %>
+<!--footer/navbar pulled from partials folder-->
+<%- include ./partials/footer.ejs %>
