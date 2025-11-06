@@ -4,8 +4,7 @@
 
 <!--main content (body)-->
 
-<main class="flex-fill"> 
-<!--flex-fill is a bootstrap utility that makes the element using it expand to fit the available space, I used for fluidity-->
+<main> 
     
   <script src="/Script/video.js" defer></script>
   <!--defer tells the browser to download the script but wait to execute after html is fully parsed, prevnts blocking the page from rendering-->
@@ -36,13 +35,15 @@
         </div>
 
 
-        <!-- About Text -->
-        <div class="col-12 col-md-6 text-md-start text-center">
+        <!--about me text-->
+        <div class="col-12 col-md-6">
+        <!--same logic as above except now on medium screens this text takes up 6 out of 12 columns (half the page)-->
           <article>
             <h4><mark>Who is Haneen?</mark></h4>
             <p>I am 20 years old and currently going to school at Ontario Tech University.</p>
 
             <section class="mt-3">
+            <!--margin top value of 3 to separate sections-->
               <h5><mark>My Dream</mark></h5>
               <p>I would like to become smart enough to be an ethical hacker one day so that I can help others! I am nowhere near my goal yet but everyday I take a step in the right direction. I network, try to attain different certificates, and sometimes I reach out to security professionals for advice!</p>
             </section>
@@ -55,30 +56,28 @@
         </div>
       </div>
 
-      <!-- Video (smaller) -->
+      <!--my video which is in next row under the photo/text row-->
       <div class="mt-4">
-        <video 
-          class="rounded shadow"
-          controls 
-          muted 
-          loop 
-          poster="/Asset/images/rubikscube.jpg" 
-          id="myvideo"
-          style="max-width: 60%; height: auto;">
+        <video class="rounded shadow" controls muted loop poster="/Asset/images/rubikscube.jpg" style="max-width:60%; height:auto;" id="myvideo">
+        <!--gives video rounded corners and a shadow behind it, gives video controls, automatically muted, a poster, and also ensures that the video only takes up 60% of its container's width (did not want video to take up too much of the page horizontally), height adjusts with page for fluidity, give video an id that can be passed as a parameter in our js file for video play button-->
           <source src="/Asset/images/aboutme.mp4" type="video/mp4">
           <source src="/Asset/images/aboutme.ogv" type="video/ogg">
+          <!--having both mp4 and ogv versions of the video in case a broswer doesn't support one or the other-->
           Your browser doesn't support the video tag.
+          <!--in case browser supports neither, the text above is displayed-->
         </video>
       </div>
 
-      <!-- Play/Pause Button -->
+      <!--play button for video-->
       <div class="mt-3">
         <button class="playbutton" onclick="playPause()">Play/Pause</button>
+        <!--call on our play button js function in video.js-->
+
       </div>
 
     </div>
   </div>
 </main>
 
-<!-- Footer -->
+<!--footer pulled from partials folder-->
 <%- include ./partials/footer.ejs %>

@@ -1,11 +1,101 @@
+<!--header/navbar pulled from partials folder-->
 <%- include ./partials/header.ejs %>
-    <!--Header / Navbar-->
-    <%- include ./partials/main_nav.ejs %>
+<%- include ./partials/main_nav.ejs %>
 
-    <!--Main Content-->
-    <main class="flex-fill">
-      
-    </main>
+<!--main content (body)-->
 
-    <!-- Footer / Navbar -->
-    <%- include ./partials/footer.ejs %>
+<main>
+    <div class="container-fluid py-5">
+    <!--container-fluid is a bootstrap class that gives the element a centered and responsive container that takes up the entire width of the page, perfect for fluidity-->
+    <!--py-5 means padding y (top and bottom) with a value of 5, this gives the container internal vertical spacing between itself and content for a cleaner look-->
+
+    <!--intro with text -->
+    <div class="row justify-content-center mb-5">
+    <!--row class for the text, justify-content-center centers the row horizontally, mb-5 gives the row a bottom margin value of 5 to add spacing between itself and the next row-->
+      <div class="col-11 col-md-8 col-lg-6 text-center">
+        <!--this column was researched for fluidity
+        -col-11 is a bootstrap grid class which means on small screens (like phones) the column will take up 11 out of 12 columns (falmost full width)
+        -col-md-8 means that on medium screens, the column will take up 8 out of 12 columns (two thirds of the width)
+        -col-lg-6 means that on large screens, the column will take up 6 out of 12 columns (half of the width)
+        -text-center ensures the element is centered
+        -all together this ensures an appealing and fluid look no matter what size screen the home page takes up-->
+        <div >
+        <!--gives the element a light background with an overall padding of 4, makes the element have rounded corners and a shadow behind it-->
+          <h1 class="m-2">My Projects</h1>
+          <h3>
+            Below are some of my many projects that I've worked on since the start of my university career. Take a look!
+          </h3>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row justify-content-center text-center m-4">
+    <!--bootstrap row class creats a a horizontal row of columns, justify-content-center aligns the columns horizontally within the row, text-center centers the content within each column, and g-4 is a gap value of 4 between columns, together this ensures my row of icons stays fluid without overlapping on each other-->
+
+      <!--about me icon-->
+      <div class="col-sm-12 col-md-10 col-lg-8">
+      <div class="bg-light p-4 rounded shadow text-box">
+        <!--gives the element a light background with an overall padding of 4, makes the element have rounded corners and a shadow behind it-->
+          <h3 class="fs-4">
+            Welcome to my portfolio! Here you can learn more about myself, my projects,
+            and even contact me for further questions! Feel free to use the navigation
+            or buttons below to walk through the site!
+          </h3>
+      </div>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center m-4">
+    <!--bootstrap row class creats a a horizontal row of columns, justify-content-center aligns the columns horizontally within the row, text-center centers the content within each column, and g-4 is a gap value of 4 between columns, together this ensures my row of icons stays fluid without overlapping on each other-->
+
+      <!--about me icon-->
+      <div class="col-sm-12 col-md-10 col-lg-8">
+      <div class="bg-light p-4 rounded shadow text-box">
+        <!--gives the element a light background with an overall padding of 4, makes the element have rounded corners and a shadow behind it-->
+          <h3 class="fs-4">
+            Welcome to my portfolio! Here you can learn more about myself, my projects,
+            and even contact me for further questions! Feel free to use the navigation
+            or buttons below to walk through the site!
+          </h3>
+      </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center text-center m-4">
+    <!--bootstrap row class creats a a horizontal row of columns, justify-content-center aligns the columns horizontally within the row, text-center centers the content within each column, and g-4 is a gap value of 4 between columns, together this ensures my row of icons stays fluid without overlapping on each other-->
+
+      <!--about me icon-->
+      <div class="col-sm-12 col-md-10 col-lg-8">
+      <div class="bg-light p-4 rounded shadow text-box">
+        <!--gives the element a light background with an overall padding of 4, makes the element have rounded corners and a shadow behind it-->
+          <h3 class="fs-4">
+            Welcome to my portfolio! Here you can learn more about myself, my projects,
+            and even contact me for further questions! Feel free to use the navigation
+            or buttons below to walk through the site!
+          </h3>
+      </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center text-center m-4">
+    <!--bootstrap row class creats a a horizontal row of columns, justify-content-center aligns the columns horizontally within the row, text-center centers the content within each column, and g-4 is a gap value of 4 between columns, together this ensures my row of icons stays fluid without overlapping on each other-->
+
+      <!--about me icon-->
+      <div class="col-sm-12 col-md-10 col-lg-8">
+      <div class="bg-light p-4 rounded shadow text-box">
+        <!--gives the element a light background with an overall padding of 4, makes the element have rounded corners and a shadow behind it-->
+          <h3 class="fs-4">
+            Welcome to my portfolio! Here you can learn more about myself, my projects,
+            and even contact me for further questions! Feel free to use the navigation
+            or buttons below to walk through the site!
+          </h3>
+      </div>
+      </div>
+    </div>
+    
+  </div>
+</main>
+
+
+<!-- Footer / Navbar -->
+<%- include ./partials/footer.ejs %>
