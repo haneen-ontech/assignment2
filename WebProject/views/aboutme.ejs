@@ -1,52 +1,84 @@
+<!--header/navbar pulled from partials folder-->
 <%- include ./partials/header.ejs %>
-    <!--Header / Navbar-->
-    <%- include ./partials/main_nav.ejs %>
+<%- include ./partials/main_nav.ejs %>
 
-    <!--Main Content-->
-    <main class="flex-fill">
-    <script src="/Script/video.js" defer></script>
-          <!--All content is enclosed in the wrapper ID style-->
-    <div id="wrapper" class="container my-auto">
-      <!--The banner ID style is inside the wrapper ID style, the banner is the top section of the webpage and usually contains the main heading, navigation bar, and so forth, that is why it is a <header> tag instead of <div> tag-->
-        <div class="container text-center">
-            <div class="row align-items-stretch">
-                <div class="col bg-light p-3">
-                    <figure class="shadow"> 
-                        <!--semantic tag used for linking images, can control size of image, needs alt id for reference later-->
-                        <img src="/Asset/images/profile.jpeg" width="190" height="240" alt="mypic">
-                        <figcaption>
-                        <h5>This is me!</h5>
-                        </figcaption>
-                    </figure>
-                    <article> <!--<article> tag with <section> tags to divide information in order-->
-                    <h4>Who is Haneen?</h4>
-                    <h6>I am 20 years old and currently going to school at Ontario Tech University.</h6>
-                    <section>
-                        <h5><mark>My Dream</mark></h5>
-                        <h6>I would like to become smart enough to be an ethical hacker one day so that I can help others!</h6>
-                    </section>
-                    <section>
-                        <h5><mark>My Favourites</mark></h5>
-                        <h6>My favourite things besides cybersecurity are: sushi, puzzles and fashion.
-                        </h6>
-                    </section>
-                    </article>
-                </div>
-                <div class="col bg-light p-3">
-                    <video class="shadow" controls muted loop poster="/Asset/images/rubikscube.jpg" id="myvideo"> <!--video controls such as automaticlaly muted, plays on loop, and a poster for when video isn't playing-->
-                    <source src="/Asset/images/aboutme.mp4" type="video/mp4"> <!--have both mp4 and ogg formats to ensure compatability with most browsers-->
-                    <source src="/Asset/images/aboutme.ogv" type="video/ogg">
-                    Your browser doesn't support the video tag. <!--In case no file or video works due to not being supported by browser-->
-                    </video>
-                    <!--Button class for video playbutton, call on js function-->
-                    <button class="playbutton" onclick="playPause()">Play/Pause</button>
-                </div>
-            </div>
+<!--main content (body)-->
+
+<main class="flex-fill"> 
+<!--flex-fill is a bootstrap utility that makes the element using it expand to fit the available space, I used for fluidity-->
+    
+  <script src="/Script/video.js" defer></script>
+  <!--defer tells the browser to download the script but wait to execute after html is fully parsed, prevnts blocking the page from rendering-->
+
+  <div class="container my-5">
+  <!--container is a bootstrap class that gives the element a centered and responsive container that adapts to different screen sizes, perfect for fluidity-->
+  <!--my-5 means margin y (top and bottom) with a value of 5, this gives the container vertical spacing for a cleaner look-->
+    <div class="bg-light p-4 rounded shadow text-center">
+    <!--gives the element a light background with an overall padding of 3, makes the element have rounded corners and a shadow behind it, makes elements within it centered-->
+
+      <!--row class which holds my image and text-->
+      <div class="row my-2">
+      <!--gives row element a margin-y value (vertical) of 2, spaces it vertically from whatever will be under it-->
+
+        <!--my profile photo-->
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+        <!--this column was researched for fluidity
+        -col-12 is a bootstrap grid class which means on small screens (like phones) the column will take up all 12 columns (full width)
+        -col-md-4 means that on medium screen or larger, the column will take up 4 out of 12 columns (one third of the width)
+        -mb-3 means that it has a margin of three at the bottom of the element
+        -mb-md-0 means that for medium screens or larger the bottom margin is removed
+        -all together this ensures an appealing and fluid look no matter what size screen the about me page takes up-->
+          <figure class="bg-black rounded shadow p-3">
+            <img src="/Asset/images/profile.jpeg" class="img-fluid rounded mb-2" width="200" height="250">
+            <!--retrieving my image from my asset folder, giving it the img-fluid bootstrap class so that it is responsive with the page, rounding image corners and giving the bottom margin a value of 2, -->
+            <figcaption><h5>Hello There!</h5></figcaption>
+          </figure>
         </div>
 
-      <!--The clear class style removes floats-->
-      <div class="clear"></div>
-    </main>
 
-    <!-- Footer / Navbar -->
-    <%- include ./partials/footer.ejs %>
+        <!-- About Text -->
+        <div class="col-12 col-md-6 text-md-start text-center">
+          <article>
+            <h4><mark>Who is Haneen?</mark></h4>
+            <p>I am 20 years old and currently going to school at Ontario Tech University.</p>
+
+            <section class="mt-3">
+              <h5><mark>My Dream</mark></h5>
+              <p>I would like to become smart enough to be an ethical hacker one day so that I can help others! I am nowhere near my goal yet but everyday I take a step in the right direction. I network, try to attain different certificates, and sometimes I reach out to security professionals for advice!</p>
+            </section>
+
+            <section class="mt-3">
+              <h5><mark>My Favourites</mark></h5>
+              <p>My favourite things besides cybersecurity are sushi, puzzles, and fashion. I like to do art in my spare time and I like solving puzzles. Watch my rubik's cube video below to see me solving one!</p>
+            </section>
+          </article>
+        </div>
+      </div>
+
+      <!-- Video (smaller) -->
+      <div class="mt-4">
+        <video 
+          class="rounded shadow"
+          controls 
+          muted 
+          loop 
+          poster="/Asset/images/rubikscube.jpg" 
+          id="myvideo"
+          style="max-width: 60%; height: auto;">
+          <source src="/Asset/images/aboutme.mp4" type="video/mp4">
+          <source src="/Asset/images/aboutme.ogv" type="video/ogg">
+          Your browser doesn't support the video tag.
+        </video>
+      </div>
+
+      <!-- Play/Pause Button -->
+      <div class="mt-3">
+        <button class="playbutton" onclick="playPause()">Play/Pause</button>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<%- include ./partials/footer.ejs %>

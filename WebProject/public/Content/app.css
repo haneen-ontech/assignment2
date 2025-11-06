@@ -1,59 +1,63 @@
-
 @charset "UTF-8";
-/*global styles, access to wide character set*/
+/*using UTF-8 so all characters can be correctly used*/
 
-
-/* The body tag style applies to all elements on the page */
-/* Global font and background */
+/*styling for body, choosing a more attractive font for viewers eyes, simplified the background gradient*/
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, lightpink 0%, lightblue 100%);
-    margin: 0;
-    padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, lightpink 0%, lightblue 100%);
+  margin: 0;
+  padding: 0;
 }
 
-/* Figure styling */
+/*styling for figure, */
 figure {
-    background-color: black;
-    border: 4px solid darkslateblue;
-    display: inline-block;
-    margin: 0 auto;
+  background-color: skyblue;
+  border: 4px solid skyblue;
+  display: inline-block; /*this keeps the figure only as big as the image itself, useful for keeping everything together*/
+  margin: 0; 
+  padding: 0;
 }
 
+/*styling for figure caption*/
 figcaption {
-    color: black;
-    text-align: center;
-    font-size: small;
-    margin-top: 10px;
     font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 10px; /*keeps the figure caption slightly separate from bottom of figure*/
 }
 
-/* Article text */
+/*article styling*/
 article {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
+  text-align: left;
+  margin-top: 20px;
 }
 
-/* Play button styling */
+/*styling the highlight colour/weight when used in article*/
+article mark {
+    background-color: skyblue;
+    font-weight: bold;
+}
+
+/*all headings/paragraphs assigned the font Poppins or sans-serif*/
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Poppins', sans-serif;
+}
+
+/*styling play button, kept basically the same as assignment 1*/
 .playbutton {
-    background-color: darkslateblue;
-    color: white;
-    height: 40px;
-    border: 2px white solid;
-    box-shadow: 10px 10px 5px black;
-    border-radius: 5px;
-    margin-top: 10px;
+  background-color: skyblue;
+  color: black;
+  height: 40px;
+  border: 4px white solid;
+  box-shadow: 4px 4px 12px darkgrey;
+  border-radius: 20px;
+  padding: 0 20px; /*sets padding only for right and left values*/
 }
 
+/*styling play button during the event that it is hovered over*/
 .playbutton:hover {
-    background-color: darkgrey;
-    color: black;
-    opacity: 0.5;
-}
-
-/* Footer styles are fine */
-#mainfooter, #aboutfooter {
-    text-align: center;
-    padding: 10px;
+  background-color: darkgrey;
+  color: white;
+  opacity: 0.8;
+  transform: scale(1.05); /*makes the button larger when hovered over*/
 }

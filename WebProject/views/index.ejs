@@ -1,13 +1,13 @@
-<!-- Header / Navbar -->
+<!-- header/navbar being pulled from partials folder-->
 <%- include ./partials/header.ejs %>
 <%- include ./partials/main_nav.ejs %>
 
-<!-- Main Content -->
+<!-- main content (body of the page) -->
 <main>
-  <!-- Wrapper container-fluid for full width -->
+  <!-- wrapper with class container-fluid fso it matches width of screen -->
   <div class="container-fluid py-5">
 
-    <!-- Intro Text Section -->
+    <!-- intro with text -->
     <div class="row justify-content-center mb-5">
       <div class="col-11 col-md-8 col-lg-6 text-center">
         <div class="bg-light p-4 rounded shadow-sm">
@@ -20,23 +20,22 @@
       </div>
     </div>
 
-    <!-- Icon Row -->
+    <!-- my icon wow -->
     <div class="row justify-content-center text-center g-4">
-      <!-- Contact -->
+      <!-- contact icon-->
       <div class="col-10 col-sm-6 col-md-4 col-lg-3">
         <a href="contactme">
           <img src="/Asset/images/mail-icon.jpg" class="img-fluid rounded shadow" title="Contact Me" alt="Contact Icon">
         </a>
       </div>
-
-      <!-- Projects -->
+      <!-- projects icon-->
       <div class="col-10 col-sm-6 col-md-4 col-lg-3">
         <a href="projects">
           <img src="/Asset/images/pencil-icon.jpg" class="img-fluid rounded shadow" title="My Projects" alt="Projects Icon">
         </a>
       </div>
 
-      <!-- About Me -->
+      <!-- about me icon -->
       <div class="col-10 col-sm-6 col-md-4 col-lg-3">
         <a href="about">
           <img src="/Asset/images/question-icon.jpg" class="img-fluid rounded shadow" title="About Me" alt="About Icon">
@@ -47,5 +46,5 @@
   </div>
 </main>
 
-<!-- Footer / Navbar -->
+<!-- footer/navbar -->
 <%- include ./partials/footer.ejs %>
