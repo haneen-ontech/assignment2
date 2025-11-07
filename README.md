@@ -18,8 +18,8 @@ The website is deployed using **Render**, allowing for easy updates and continuo
 
 ## Links
 
-Link to my live portfolio using Render:
-Link to my github repository:
+1. Link to my live portfolio using Render: https://a2-k15n.onrender.com/
+2. Link to my github repository: https://github.com/haneen-ontech/assignment2/blob/main/README.md 
 
 ## Works Cited
 
