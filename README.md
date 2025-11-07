@@ -28,6 +28,7 @@ Most of this assignment was taken straight from course content (like navigation 
 1. Bootstrap grid system: this was skeletal code I used in order to create rows/columns for several aspects of my site. For example it was used to structure my about me page (with the row of icons), my projects page (the rows of project text boxes), and any other structure following a row/column format. The skeletal code from Bootstrap can be accessed here: https://getbootstrap.com/docs/5.3/layout/grid/
 2. Bootstrap navbar: this was used in an in-class example but I will include it anyways. Both the header and footer navbar follow this code structure from Bootstrap: https://getbootstrap.com/docs/5.3/components/navbar/
 3. Many features for bootstrap such as spacing (m-5 or py-3 for example), and responsive utilities (like col-xs, col-md and so on) were learned from: https://www.w3schools.com/bootstrap5/bootstrap_utilities.php
+4. Icons in navigation bar were taken from font-awesome: https://fontawesome.com/icons 
 
 
 Note: the main content within each page was taken from the files of my assignment 1 website portfolio.
